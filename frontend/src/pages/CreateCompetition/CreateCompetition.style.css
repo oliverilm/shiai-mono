@@ -1,0 +1,54 @@
+/* .editor-wrapper {
+    display: flex;
+} */
+
+.editor-wrapper {
+    width: 50vw;       
+}
+
+.name-wrapper {
+    width: 50vw;       
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.margin {
+    margin: 1em;
+}
+
+.row {
+    margin: 1em 0;
+}
+
+.flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: 'bottom'
+}
+
+hr {
+    color: #ccc;
+    margin: .5em 10px;
+}
+
+@media only screen and (max-width: 850px) {
+    .editor-wrapper {
+        width: 100%;
+    }
+
+    .name-wrapper {
+        width: 100%;
+    }
+
+
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+  

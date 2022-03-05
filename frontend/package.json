@@ -1,0 +1,165 @@
+{
+  "name": "shiai-frontend",
+  "version": "0.1.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "6.2.0",
+    "@emotion/react": "11.5.0",
+    "@emotion/styled": "11.3.0",
+    "@mui/icons-material": "5.1.0",
+    "@mui/material": "5.1.0",
+    "@mui/styles": "5.1.0",
+    "@reduxjs/toolkit": "1.6.2",
+    "@testing-library/dom": "8.11.1",
+    "@testing-library/jest-dom": "5.15.0",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/react-hooks": "7.0.2",
+    "@testing-library/user-event": "13.5.0",
+    "axios": "0.24.0",
+    "clsx": "1.1.1",
+    "customize-cra": "1.0.0",
+    "draft-js": "0.11.7",
+    "draftjs-to-html": "0.9.1",
+    "i18next": "21.4.2",
+    "i18next-browser-languagedetector": "^6.1.0",
+    "immutable": "4.0.0",
+    "material-table": "1.69.3",
+    "moment": "2.29.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-draft-wysiwyg": "1.14.7",
+    "react-google-login": "5.2.2",
+    "react-i18next": "11.14.2",
+    "react-query": "3.32.1",
+    "react-redux": "7.2.6",
+    "react-responsive-carousel": "3.2.21",
+    "react-router": "6.0.2",
+    "react-router-dom": "6.0.2",
+    "react-scripts": "4.0.3",
+    "react-toastify": "8.1.0",
+    "styled-components": "^5.2.1",
+    "typescript": "4.4.4",
+    "web-vitals": "2.1.2",
+    "workbox-background-sync": "6.3.0",
+    "workbox-broadcast-update": "6.3.0",
+    "workbox-cacheable-response": "6.3.0",
+    "workbox-core": "6.3.0",
+    "workbox-expiration": "6.3.0",
+    "workbox-google-analytics": "6.3.0",
+    "workbox-navigation-preload": "6.3.0",
+    "workbox-precaching": "6.3.0",
+    "workbox-range-requests": "6.3.0",
+    "workbox-routing": "6.3.0",
+    "workbox-strategies": "6.3.0",
+    "workbox-streams": "6.3.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "plop": "plop",
+    "commit": "cz",
+    "release": "standard-version",
+    "pre-release": "standard-version --prerelease",
+    "coverage": "react-app-rewired test --coverage --watchAll=false",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {},
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,md}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{css,pcss,scss}": [
+      "stylelint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@store/(.*)$": "<rootDir>/src/providers/stores/$1"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.tsx",
+      "!src/serviceWorker.ts",
+      "!src/reportWebVitals.ts"
+    ]
+  },
+  "devDependencies": {
+    "@kyleshevlin/eslint-plugin": "1.3.0",
+    "@microsoft/tsdoc": "0.13.2",
+    "@types/draft-js": "0.11.6",
+    "@types/draftjs-to-html": "0.8.1",
+    "@types/jest": "27.0.2",
+    "@types/node": "16.11.7",
+    "@types/react": "17.0.34",
+    "@types/react-dom": "17.0.11",
+    "@types/react-draft-wysiwyg": "1.13.3",
+    "@types/react-i18next": "8.1.0",
+    "@types/react-router-dom": "5.3.2",
+    "@types/styled-components": "^5.1.9",
+    "@types/testing-library__jest-dom": "5.14.1",
+    "@typescript-eslint/eslint-plugin": "5.3.1",
+    "@typescript-eslint/parser": "5.3.1",
+    "auto-changelog": "2.3.0",
+    "autoprefixer": "10.4.0",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "4.2.4",
+    "conventional-changelog-conventionalcommits": "^4.6.0",
+    "cross-env": "7.0.3",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "7.29.0",
+    "eslint-config-airbnb": "19.0.0",
+    "eslint-config-airbnb-typescript": "15.0.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest-dom": "3.9.2",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-sonarjs": "0.10.0",
+    "eslint-plugin-tsdoc": "0.2.14",
+    "husky": "7.0.4",
+    "inquirer-directory": "2.2.0",
+    "lint-staged": "11.2.6",
+    "npm-check": "^5.9.2",
+    "npm-run-all": "4.1.5",
+    "plop": "2.7.6",
+    "postcss": "8.3.11",
+    "prettier": "2.4.1",
+    "react-app-rewired": "^2.1.8",
+    "standard-version": "^9.3.0",
+    "stylelint": "14.0.1",
+    "stylelint-config-recommended": "6.0.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "2.3.2"
+  }
+}

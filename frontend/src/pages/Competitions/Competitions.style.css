@@ -1,0 +1,7 @@
+.competitions-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
