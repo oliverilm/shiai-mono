@@ -6,7 +6,6 @@
     "dev": "debug=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
     "build": "rimraf dist && tsc",
     "start": "NODE_PATH=./dist node ./dist/index.js",
-    "prepare": "husky install",
     "lint": "eslint --max-warnings 0 --ext .js,ts src",
     "lint-staged-husky": "lint-staged",
     "lint-prettier": "prettier --config .prettierrc --list-different '{src,test}/**/*.{ts,js,css,scss}'",
